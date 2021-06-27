@@ -13,7 +13,7 @@ type = input("ElasticSearch Type : ")
 
 
 # get csv data
-data = pd.read_csv(csv_file)
+data = pd.read_csv(csv_file).replace(np.NaN, '', regex=True)
 
 
 # config el info
